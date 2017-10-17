@@ -6,7 +6,7 @@ const spotifyClient = new Spotify({
   secret: 'd148d78b10224966982eb37909e6d81b'
 })
 
-console.log('keys loading');
+console.log('keys loading \n');
 
 const twitterKeys = {
   consumer_key: 'hl0QWM96OeSPoCwTxEuOgJ84A',

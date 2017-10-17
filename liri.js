@@ -7,8 +7,8 @@ const commandValue = process.argv[3];
 
 switch (command) {
   case "my-tweets":
-    console.log("tweet case");
-    // tweets.getTweets();
+    // console.log("tweet case");
+    // tweets.searchTwitter(commandValue);
     break;
 
   case "spotify-this-song":
@@ -26,11 +26,3 @@ switch (command) {
     console.log('previous case');
     break;
 }
-
-
-// const params = {screen_name: 'nodejs'};
-// client.get('statuses/user_timeline', params, function(error, tweets, response) {
-//   if (!error) {
-//     console.log(tweets);
-//   }
-// });

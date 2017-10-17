@@ -4,29 +4,21 @@ const Twitter = require('twitter');
 const twitterKeys = keys.twitterKeys;
 const client = Twitter(twitterKeys);
 
-console.log("hello from twitter file!");
+// console.log("hello from twitter file! \n");
 
 let options = {
   screen_name: 'donny_vallejo',
   count: 20
 };
+// const searchTwitter = () => {
 
-client.get('statuses/user_timeline', options, function(err, data) {
-  console.log(data[0].created_at);
-  for (let i = 0; i < data.length ; i++) {
-    console.log("Tweets", data[i].created_at, " \n", data[i].text);
-  }
-})
 
-// try {
-//    getTweets(); // generates an exception
-// }
-// catch (e) {
-//    // statements to handle any exceptions
-//    console.log("error in twitter.js", e); // pass exception object to error handler
-// }
-// module.exports = {
-//   getTweets,
+  client.get('statuses/user_timeline', options, function(err, data) {
+    console.log(data[0].created_at);
+    for (let i = 0; i < data.length ; i++) {
+      console.log("Tweeted on ", data[i].created_at, " \n", data[i].text, " \n");
+    }
+  })
 // };
 
 // var christmas = {
@@ -44,9 +36,3 @@ client.get('statuses/user_timeline', options, function(err, data) {
 //
 // console.log(arraySample[5]);
 // console.log(arraySample[5].animal);
-
-// TODO: get tweets
-// 2. format with a promise
-// 3. .then(tweets => {console.log("tweets", tweets);
-//  find
-//})
