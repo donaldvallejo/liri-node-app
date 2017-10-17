@@ -7,8 +7,8 @@ const commandValue = process.argv[3];
 
 switch (command) {
   case "my-tweets":
-    // console.log("tweet case");
     // tweets.searchTwitter(commandValue);
+    // console.log("tweet case");
     break;
 
   case "spotify-this-song":
