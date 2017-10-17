@@ -1,7 +1,5 @@
 const keys = require('../keys');
-// const Spotify = require('node-spotify-api');
-
-// const spotifyKeys = keys.spotifyKeys;
+const Spotify = require('node-spotify-api');
 
 const spotifyKeys = keys.spotifyKeys;
 // const client =  Spotify(spotifyKeys);

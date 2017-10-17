@@ -6,17 +6,17 @@ const client = Twitter(twitterKeys);
 
 // console.log("hello from twitter file! \n");
 
-let options = {
-  screen_name: 'donny_vallejo',
-  count: 20
-};
 // const searchTwitter = () => {
+  let options = {
+    screen_name: 'donny_vallejo',
+    count: 20
+  };
 
 
   client.get('statuses/user_timeline', options, function(err, data) {
     console.log(data[0].created_at);
     for (let i = 0; i < data.length ; i++) {
-      console.log("Tweeted on ", data[i].created_at, " \n", data[i].text, " \n");
+      console.log("Tweeted on", data[i].created_at, " \n", data[i].text, " \n");
     }
   })
 // };

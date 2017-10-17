@@ -13,7 +13,7 @@ switch (command) {
 
   case "spotify-this-song":
     spotify.searchSpotify(commandValue);
-    console.log('spotify case');
+    // console.log('spotify case');
     break;
 
   case "movie-this":
