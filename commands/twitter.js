@@ -1,30 +1,33 @@
 const keys = require('../keys');
-const twitter = require('twitter');
+const Twitter = require('twitter');
 
-const getTweets = () =>  {
-  console.log("hello from twitter file!");
-}
-var options = { screen_name: 'donny_vallejo',
-                count: 20
-               };
+const twitterKeys = keys.twitterKeys;
+const client = Twitter(twitterKeys);
 
-keys.get('statuses/user_timeline', options, function(err, data) {
+console.log("hello from twitter file!");
+
+let options = {
+  screen_name: 'donny_vallejo',
+  count: 20
+};
+
+client.get('statuses/user_timeline', options, function(err, data) {
   console.log(data[0].created_at);
-  for (var i = 0; i < data.length ; i++) {
+  for (let i = 0; i < data.length ; i++) {
     console.log("Tweets", data[i].created_at, " \n", data[i].text);
   }
 })
 
-try {
-   getTweets(); // generates an exception
-}
-catch (e) {
-   // statements to handle any exceptions
-   console.log("error in twitter.js", e); // pass exception object to error handler
-}
-module.exports = {
-  getTweets,
-};
+// try {
+//    getTweets(); // generates an exception
+// }
+// catch (e) {
+//    // statements to handle any exceptions
+//    console.log("error in twitter.js", e); // pass exception object to error handler
+// }
+// module.exports = {
+//   getTweets,
+// };
 
 // var christmas = {
 //    sled: "raindeer",

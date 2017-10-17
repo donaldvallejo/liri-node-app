@@ -5,14 +5,14 @@ const command = process.argv[2];
 const commandValue = process.argv[3];
 
 
-switch (commandValue) {
+switch (command) {
   case "my-tweets":
     console.log("tweet case");
-    tweets.getTweets();
+    // tweets.getTweets();
     break;
 
   case "spotify-this-song":
-    // spotify.somefunction();
+    spotify.searchSpotify(commandValue);
     console.log('spotify case');
     break;
 
