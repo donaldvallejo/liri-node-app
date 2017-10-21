@@ -1,4 +1,4 @@
-const keys = require('../keys');
+const keys = require('../keys.js');
 const Spotify = require('node-spotify-api');
 
 const spotifyKeys = keys.spotifyKeys;
