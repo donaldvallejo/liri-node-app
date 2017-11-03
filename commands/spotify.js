@@ -1,4 +1,4 @@
-const keys = require('../keys.js');
+const keys = require('../keys');
 const Spotify = require('node-spotify-api');
 
 const spotifyKeys = keys.spotifyKeys;
@@ -17,7 +17,8 @@ const searchSpotify = (userInput) => {
     .catch(function(err) {
       console.log(err);
     });
-}
+};
+
 module.exports = {
   searchSpotify
 };

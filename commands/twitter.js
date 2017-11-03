@@ -1,4 +1,4 @@
-const keys = require('../keys.js');
+const keys = require('../keys');
 const Twitter = require('twitter');
 
 const twitterKeys = keys.twitterKeys;
@@ -6,9 +6,9 @@ const client = Twitter(twitterKeys);
 
 // console.log("hello from twitter file! \n");
 
-// const searchTwitter = () => {
+const searchTwitter = (screenName) => {
   let options = {
-    screen_name: 'donny_vallejo',
+    screen_name: screenName,
     count: 20
   };
 
@@ -19,8 +19,11 @@ const client = Twitter(twitterKeys);
       console.log("Tweeted on", data[i].created_at, " \n", data[i].text, " \n");
     }
   })
-// };
+};
 
+module.exports = {
+  searchTwitter
+};
 // var christmas = {
 //    sled: "raindeer",
 //    santaClause: "presents"
